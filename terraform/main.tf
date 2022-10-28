@@ -39,8 +39,8 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias  = "us_east_1"
-  region = "us-east-1"
+  alias  = "us_west_2"
+  region = "us-west-2"
 }
 
 module "s3pypi" {
@@ -52,6 +52,6 @@ module "s3pypi" {
   enable_basic_auth        = var.enable_basic_auth
 
   providers = {
-    aws.us_east_1 = aws.us_east_1
+    aws.us_west_2 = aws.us_west_2
   }
 }
